@@ -1,0 +1,20 @@
+# docker-compose.yml
+version: "3.1"
+services:
+#My express API maps the exposed 8080 port to port 8000
+  app:
+    image: node-express
+    ports: 
+      - "8000:8080"
+
+#postgres image, runs on port 5432, copies docker-data contents to the base docker storage, which contains a sql that postgres will auto ingest to init the users table
+  postgres:
+    image: postgres
+    ports:
+      - "5432"
+    environment:
+      POSTGRES_USER: sammy
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: db
+    volumes:
+      - ./docker-data:/docker-entrypoint-initdb.d

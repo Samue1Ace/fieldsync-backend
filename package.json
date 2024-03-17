@@ -1,0 +1,24 @@
+{
+    "name": "fieldsync-backend",
+    "version": "1.0.0",
+    "description": "",
+    "author": "Sammy Mahdi",
+    "main": "server.js",
+    "scripts": {
+        "start": "node backend/server/server.tsx"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.16.1",
+        "pg": "^8.11.3",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "typescript": "^5.4.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.24.0",
+        "@babel/preset-env": "^7.24.0",
+        "@babel/preset-react": "^7.23.3",
+        "babel-loader": "^9.1.3"
+    }
+}
